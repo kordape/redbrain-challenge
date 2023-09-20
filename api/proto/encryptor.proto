@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package encryptorapi;
+
+option go_package = "./encryptorapi";
+
+service Encryptor {
+    rpc Encrypt (EncryptRequest) returns (EncryptResponse) {}
+}
+
+message EncryptRequest {
+    string data = 1;
+}
+
+message EncryptResponse {
+    string encrypted = 1;
+}

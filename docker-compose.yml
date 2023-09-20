@@ -1,0 +1,21 @@
+version: '3.9'
+networks:
+  redbrain-network:
+    driver: bridge
+services:
+  encryption-service:
+    # build: ./Dockerfile.encryption
+    image: encryption-service:latest
+    container_name: encryption-service
+    ports:
+      - 9001:9001
+    networks:
+      - redbrain-network
+  gateway-service:
+    # build: ./Dockerfile.gateway
+    image: gateway-service:latest
+    container_name: gateway-service
+    ports:
+      - 8080:8080
+    networks:
+      - redbrain-network
