@@ -28,13 +28,17 @@ _NOTE: For simplicity I kept both services in the same repo. Two different entry
 
 There is a Makefile targe that can be executed to run both services locally:
 
-`make start`
+```
+make start
+```
 
 This will build `Docker` images for both services and run them locally with `docker-compose`
 
 If you want to stop both services:
 
-`make stop`
+```
+make stop
+```
 
 
 ## How to test:
